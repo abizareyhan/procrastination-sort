@@ -23,5 +23,16 @@
     "dist",
     "src",
     "package.json"
+  ],
+  "keywords": [
+    "sorting",
+    "algorithm",
+    "procrastination",
+    "coffee",
+    "unproductive",
+    "async",
+    "inefficient",
+    "anti-pattern",
+    "typescript"
   ]
 }
