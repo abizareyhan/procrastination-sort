@@ -1,0 +1,27 @@
+{
+	"name": "procrastination-sort",
+	"version": "0.0.1-rc-but-actually-alpha",
+	"description": "The world's most honest sorting method: swaps elements slowly, checks Twitter constantly, and finishes eventually. Not not prod-safe",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc --watch"
+	},
+  "author": "abizareyhan <hi@abizareyhan.com> (https://github.com/abizareyhan)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abizareyhan/procrastination-sort.git"
+  },
+	"license": "MIT",
+	"devDependencies": {
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3"
+	},
+  "files": [
+    "dist",
+    "src",
+    "package.json"
+  ]
+}

@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# TypeScript output directory
+dist/
+
+# TypeScript declaration maps
+*.d.ts.map
+
+# VSCode settings (if applicable)
+.vscode/
+
+# MacOS-specific files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.log
+*.swp
+
+# IDE-specific files (e.g., JetBrains, Visual Studio)
+.idea/
+.vscode/
