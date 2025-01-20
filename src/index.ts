@@ -1,20 +1,22 @@
 export interface ProcrastinationResult<T> {
-	sortedArray: T[];
-	timeElapsed: number;
-	swapsMade: number;
-	coffeeCups: number;
-	excusesUsed: string[];
+	sortedArray: T[]; // The sorted array
+	timeElapsed: number; // Time taken in milliseconds
+	swapsMade: number; // Number of swaps made
+	coffeeCups: number; // Number of coffee breaks taken
+	excusesUsed: string[]; // List of excuses used
 }
 
-export function procrastinationSort<T>(
+export async function procrastinationSort<T>(
 	array: T[],
 	config: {
 		verbose?: boolean;
 		procrastinationProbability?: number;
 		procrastinationActivities?: string[];
+		minDelay?: number;
+		maxDelay?: number;
 		comparator?: (a: T, b: T) => number;
 	} = {}
-): ProcrastinationResult<T> {
+): Promise<ProcrastinationResult<T>> {
 	const defaultConfig = {
 		verbose: false,
 		procrastinationProbability: 0.85,
@@ -28,6 +30,8 @@ export function procrastinationSort<T>(
 			'Refactoring unnecessary code',
 			'Learning a new technology',
 		],
+		minDelay: 500,
+		maxDelay: 5000,
 		comparator: (a: T, b: T) => Number(a) - Number(b),
 	};
 
@@ -48,6 +52,10 @@ export function procrastinationSort<T>(
 			excuses.push(activity);
 			if (finalConfig.verbose) console.log(activity);
 			coffeeCups++;
+
+			await new Promise((resolve) =>
+				setTimeout(resolve, Math.random() * (finalConfig.maxDelay - finalConfig.minDelay) + finalConfig.minDelay)
+			);
 
 			continue;
 		}
