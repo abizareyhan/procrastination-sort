@@ -1,6 +1,6 @@
 {
 	"name": "procrastination-sort",
-	"version": "0.0.1-rc-but-actually-alpha1",
+	"version": "0.0.1-rc-but-actually-alpha2",
 	"description": "The world's most honest sorting method: swaps elements slowly, checks Twitter constantly, and finishes eventually. Not not prod-safe",
   "type": "module",
   "main": "dist/index.js",
